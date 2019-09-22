@@ -42,7 +42,7 @@ io.sockets.on('connection',function(socket)//on()은 소켓에서 해당 이벤�
 
         socket.name=name//소켓에 이름 저장해두기
 
-        io.sockets.emit('update',{type:'connectm', name:'SERVER', message:name+'님이 접속했습니다'})//모든 소켓에게 전송
+        io.sockets.emit('update',{type:'connect', name:'SERVER', message:name+'님이 접속했습니다'})//모든 소켓에게 전송
     })
     socket.on('message', function(data)//전송한 메시지받기
     {
